@@ -8,13 +8,21 @@ router.get('/' ,function(req,res){
 router.get('/login' ,function(req,res){
   res.render('login');
 })
+router.get('/register' ,function(req,res){
+  res.render('register');
+})
 router.get('/chat' ,function(req,res){
   res.render('chatbox');
 })
 
 
-router.post('/homepage',function(req,res){
+router.post('/homepage/login',function(req,res){
   res.redirect('/login');
+
+
+});
+router.post('/homepage/register',function(req,res){
+  res.redirect('/register');
 
 });
 router.get('/homepage' ,function(req,res){
