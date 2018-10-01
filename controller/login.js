@@ -3,7 +3,7 @@ var userModel = require('../models/user');
 
 var login = function(req, res) {
     userModel.findOne({
-        regno: req.body.logid
+        email: req.body.email
     }, function(err, user) {
         if (err) throw err;
         if (user) {
