@@ -1,0 +1,56 @@
+nav{
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+}
+
+
+.logo{
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+}
+
+
+.chatbox{
+  height: 760px;
+  border-width: 10px;
+  border-style: groove;
+  background-color: #efefef;
+}
+
+.display{
+  height: 90%;
+  overflow: auto;
+}
+
+.input{
+  font-size: 170%;
+  border-style: solid;
+  height: 100%;
+  width: 85%;
+  resize: none;
+}
+
+.misc{
+  border-style: ridge;
+  height: 10%;
+}
+
+.button{
+  border-style: ridge;
+  width: 15%;
+  background: #D3D3D3;
+}
+.button:hover{
+  background: #A9A9A9;
+  border-width: medium;
+}
+.button:active{
+  border-width: thick;
+}
+.button p{
+  font-size: 150%;
+  padding-left: 30%;
+  padding-top: 8%;
+  color: #2F4F4F;
+}

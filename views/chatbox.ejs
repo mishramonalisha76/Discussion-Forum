@@ -1,41 +1,43 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="stylesheets/chat.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <meta name="viewport">
-<!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <title>StrangerThings</title>
+  <base href="/">
 
-<!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/chatbox.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://localhost:3001/socket.io/socket.io.js"></script>
 </head>
 <body>
-        
-        <nav class="navbar navbar-transparent navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <div class="navbar-brand brand-name" >Discussion Forum</div>
-                 </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hover"><a href="#">Home</a></li>
-                <li class="hover"><a href="#">About Us</a></li>
-                <li class="hover"><a href="#">Team</a></li>
+  <div class="container">
+    <div class="row container">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header navbarman">
+            <a class="navbar-brand logo" href="/">Room</a>
+            <a class="navbar-brand logo" href="/">Browse Rooms</a>
+            <a class="navbar-brand logo" href="/profile">Profile</a>
+            <a class="navbar-brand logo" href="/logout">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-            </ul>
-            </div>
-         </nav>
-    <div class="container-fluid"></div>
-    <div align="center">
-      <div class ="display" id="message-container"></div>
-      <div>
-          <textarea id="message" class="text"></textarea>
-          <button class="send" type="button" onclick="sendMessage()">SEND</button>
+    <div class="chatbox container">
+      <div id="display" class="display"></div>
+      <div class="row misc">
+        <textarea id="input" class="input" rows="8" cols="80"></textarea>
+        <div class="button">
+          <p onselectstart="return false">Send</p>
+        </div>
       </div>
     </div>
-    </div>
-</div>  
-</body>
+  </div>
+
+  <script type="text/javascript" src="javascripts/chatbox.js"></script>
 </body>
 </html>
