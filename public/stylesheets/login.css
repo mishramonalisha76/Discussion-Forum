@@ -9,7 +9,14 @@ div{
     margin:auto;
     padding:5px;
      font-variant:small-caps;
-    background-color:honeydew;
+    background-color:lavenderblush;
 
+  }
+  body{
+    background-color:lavender;
+  }
+  .log{
+    background-color: green;
+    color:white;
   }
 
