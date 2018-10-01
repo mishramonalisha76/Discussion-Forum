@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Topics</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheets/display.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Topics</h1>
+            <div class="list-group">
+            <% for(let i = 0;i < topics.length ; i++){ %>
+                <a class="list-group-item" href="/topic:<%- topics[i] %>"><%- topics[i] %><span class="badge">12</span></a>
+            <% } %>
+        </div>
+        </div>
+    </body>
+</html>

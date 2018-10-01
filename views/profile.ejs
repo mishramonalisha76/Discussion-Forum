@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Profile</title>
        <style>
-       
+
       legend{
           font-variant: small-caps;
           font-size: 30px;
@@ -32,11 +32,11 @@
         {
             background-color:lavenderblush;
         }
-        
+
         </style>
     </head>
     <body>
-     
+
      <div>
          <fieldset >
              <legend >Profile</legend>
@@ -49,5 +49,16 @@
         </form>
         </fieldset>
         </div>
+        <br><br>
+        <form action="display" method="post">
+            <input type="submit" value="View all Topics">
+        </form>
+        <br><br>
+        <form action="create" method="post">
+            <label>Create a New Topic to discuss:</label><br>
+            <input type="text" name="topic">
+            <br>
+            <input type="submit" value="Create">
+        </form>
     </body>
 </html>
