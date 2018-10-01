@@ -9,6 +9,7 @@ var register=function(req,res){
 			password:req.body.password,
 			gender:req.body.gender,
 		});
+		console.log("This gender:"+req.body.gender);
 		usermodel.save(function(err,doc){
 			if(err) res.render('login',{msg:'alert("Credentials already exists..!!")'})
 			res.render('login',{msg:'alert("Registered Successfully..!!")'})

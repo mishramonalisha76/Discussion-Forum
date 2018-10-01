@@ -9,17 +9,17 @@
         <div>
             <form action="register" method="post">
                 <label>Name</label><br>
-                <input type="text" name="name"><br>
+                <input type="text" name="name" required><br>
                 <label>Email-id</label><br>
-                <input type="email" name="email"><br>
+                <input type="email" name="email" required><br>
                 <label>Phone number</label><br>
-                <input type="tel" name="phone"><br>
+                <input type="tel" name="phone" required><br>
                 <label>Password</label><br>
-                <input type="password" name="password"><br>
+                <input type="password" name="password" required><br>
                 <label>Gender:</label><br>
-                <select>
-                    <option value="male" name="gender">male</option>
-                    <option value="female" name="gender">female</option>
+                <select name="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
                 </select><br>
                 <input type="submit" value="Register">
             </form>
