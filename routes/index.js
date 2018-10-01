@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login');
+    res.render('login',{"msg":""});
 });
 router.get('/register', function(req, res) {
     res.render('register');
@@ -28,4 +28,9 @@ router.get('/profile', function(req, res) {
 
 router.post('/login', login.login);
 router.post('/register', register.register);
+
+router.post('/logout', function(req, res) {
+    req.session = null;
+    res.render('login',{"msg":"Logged out Successfully..!!"});
+});
 module.exports = router;
