@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var c=0;
-var io = require('socket.io').listen(3001, {log: false});
+
 /* GET home page. */
 router.get('/' ,function(req,res){
   res.redirect('home');
