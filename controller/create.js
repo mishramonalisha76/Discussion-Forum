@@ -8,8 +8,14 @@ var topics=function(req,res){
 		});
 		console.log(req.session.user.name);
 		topicmodel.save(function(err,doc){
-			if(!err) res.redirect('display');
-			else res.send(err);
+			if(!err){
+				req.session.msg = "Topic created Successfully..!!"
+				res.redirect('display');
+			}
+			else {
+				req.session.msg = "Topic already exists, Feel free to join..!!"
+				res.redirect('display');
+			}
 		});
 };
 

@@ -19,7 +19,7 @@ var login = function(req, res) {
                 req.session.user = details;
                 return res.redirect('/profile');
             } else
-                return res.render('login',{"msg":"No user with such credentials"});
+                return res.render('login',{"msg":"Wrong email or password, Please try again..!!"});
         }
     });
 };
