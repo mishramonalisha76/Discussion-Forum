@@ -42,7 +42,7 @@ router.get('/topic/:id', function(req, res) {
     if (req.session.user) {
         res.render('chatbox');
     } else {
-        res.redirect('homepage');
+        res.redirect('../homepage');
     }
 });
 
