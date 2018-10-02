@@ -7,28 +7,34 @@
     </head>
     <body>
 
-     <div>
+     <div class="profile">
          <fieldset >
              <legend >Profile</legend>
-        <p>Name:<%- user.name %></p>
-        <p>Email:<%- user.email %></p>
-        <p>Phone:<%- user.phone %></p>
-        <p>Gender:<%- user.gender %></p>
+        <p><b>Name:</b><%- user.name %></p>
+        <p><b>Email:</b><%- user.email %></p>
+        <p><b>Phone:</b><%- user.phone %></p>
+        <p><b>Gender:</b><%- user.gender %></p>
         <form action="logout" method="get">
             <input class="log" type="submit" value="Log out">
         </form>
         </fieldset>
         </div>
         <br><br>
-        <form action="display" method="get">
-            <input type="submit" value="View all Topics">
-        </form>
-        <br><br>
+        <div class="topic">
+        
         <form action="create" method="post">
-            <label>Create a New Topic to discuss:</label><br>
+            <label><b><i>Create a new topic to discuss:</i></b></label><br>
             <input type="text" name="topic">
             <br>
-            <input type="submit" value="Create">
+            <input class="create" type="submit" value="Create">
         </form>
+        
+        <span>OR</span>
+        
+        <form  action="display" method="get">
+            <input class="view" type="submit" value="View all topics">
+        </form>
+        
+        </div>
     </body>
 </html>
