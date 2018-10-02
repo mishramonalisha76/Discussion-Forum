@@ -4,8 +4,9 @@ var register = require('../controller/register');
 var login = require('../controller/login');
 var create = require('../controller/create');
 var topics = require('../controller/display');
-var messages = require('../controller/messages');
+
 var send = require('../controller/send');
+var refresh = require('../controller/refresh');
 /* GET home page. */
 router.get('/', function(req, res) {
     res.redirect('homepage');
@@ -13,15 +14,33 @@ router.get('/', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    res.render('login',{"msg":""});
+    if(req.session.user){
+        res.redirect('/profile');
+    }
+    else {
+        res.render('login',{"msg":""});
+    }
 });
 router.get('/register', function(req, res) {
-    res.render('register');
+    if(req.session.user){
+        res.render('register');
+    }
+    else {
+        res.redirect('profile');
+    }
 });
 router.get('/homepage', function(req, res) {
-    res.render('page');
+    if(req.session.user){
+        res.redirect('profile');
+    }
+    else {
+        res.render('page');
+    }
 });
-router.get('/topic/:id', messages.display);
+router.get('/topic/:id', function(req, res){
+    req.session.topic = req.params.id;
+    res.render('chatbox')
+});
 
 router.get('/profile', function(req, res) {
     console.log(req.session.user);
@@ -32,10 +51,12 @@ router.get('/profile', function(req, res) {
 router.post('/login', login.login);
 router.post('/register', register.register);
 router.post('/create', create.topics);
-router.post('/display', topics.display);
+router.get('/display', topics.display);
 router.post('/send', send.message);
-router.post('/logout', function(req, res) {
-    req.session = null;
+router.post('/refresh', refresh.messages);
+router.get('/logout', function(req, res) {
+    req.session.user = null;
+    console.log(req.session);
     res.render('login',{"msg":"Logged out Successfully..!!"});
 });
 module.exports = router;

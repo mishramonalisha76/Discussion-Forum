@@ -1,56 +1,53 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>StrangerThings</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheets/chatbox.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>StrangerThings</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/chatbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
+
 <body>
-    <script src="http://code.jquery.com/jquery-latest.min.js" ></script>
-<script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
 
-</script>
+    </script>
 
-  <div class="container">
-    <div class="row container">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header navbarman">
-            <a class="navbar-brand logo">Room</a>
-            <a class="navbar-brand logo" href="/display">Browse Topics</a>
-            <a class="navbar-brand logo" href="/profile">Profile</a>
-            <a class="navbar-brand logo" href="/logout">Logout</a>
-          </div>
+    <div class="container">
+        <div class="row container">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header navbarman">
+                        <a class="navbar-brand logo">Room</a>
+                        <a class="navbar-brand logo" href="display">Browse Topics</a>
+                        <a class="navbar-brand logo" href="profile">Profile</a>
+                        <a class="navbar-brand logo" href="logout">Logout</a>
+                    </div>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
 
-    <div class="chatbox container">
-      <div id="display" class="display">
-          <ul class="list-group">
-          <% for(let i = 0;i < messages.length ; i++){ %>
-              <li class="list-group-item"><%- messages[i] %></a>
-          <% } %>
-      </ul>
-      </div>
-      <div class="row misc">
-        <textarea id="input" class="input" rows="8" cols="80"></textarea>
-        <div class="button">
+        <div class="chatbox container">
+            <div id="display" class="display">
+
+            </div>
             <form action="send" method="post">
-                <input type="submit" name="" value="Send">
+                <div class="row misc">
+                    <input id="input" class="input" name="message" autofocus>
+                    <input class="button" type="submit" value="Send">
+                </div>
             </form>
         </div>
-      </div>
     </div>
-  </div>
 
-  <script type="text/javascript" src="javascripts/chatbox.js"></script>
+    <script type="text/javascript" src="javascripts/chatbox.js"></script>
 </body>
+
 </html>

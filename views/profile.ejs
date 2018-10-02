@@ -3,37 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Profile</title>
-       <style>
-
-      legend{
-          font-variant: small-caps;
-          font-size: 30px;
-      }
-      fieldset{
-          width:40%;
-
-
-      }
-      div
-      {
-          margin-left: 38.5%;
-          margin-top: 10%;
-      }
-        body
-        {
-            background-color: lavender;
-        }
-        .log
-        {
-            background-color: green;
-            color:white;
-        }
-        fieldset
-        {
-            background-color:lavenderblush;
-        }
-
-        </style>
+       <link rel="stylesheet" href="stylesheets/profile.css">
     </head>
     <body>
 
@@ -44,13 +14,13 @@
         <p>Email:<%- user.email %></p>
         <p>Phone:<%- user.phone %></p>
         <p>Gender:<%- user.gender %></p>
-        <form action="logout" method="post">
+        <form action="logout" method="get">
             <input class="log" type="submit" value="Log out">
         </form>
         </fieldset>
         </div>
         <br><br>
-        <form action="display" method="post">
+        <form action="display" method="get">
             <input type="submit" value="View all Topics">
         </form>
         <br><br>

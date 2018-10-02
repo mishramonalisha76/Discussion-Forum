@@ -1,0 +1,27 @@
+legend{
+   font-variant: small-caps;
+   font-size: 30px;
+}
+fieldset{
+   width:40%;
+
+
+}
+div
+{
+   margin-left: 38.5%;
+   margin-top: 10%;
+}
+ body
+ {
+     background-color: lavender;
+ }
+ .log
+ {
+     background-color: green;
+     color:white;
+ }
+ fieldset
+ {
+     background-color:lavenderblush;
+ }

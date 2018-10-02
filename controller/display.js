@@ -13,6 +13,7 @@ var display = function(req, res) {
         } else {
             throw err;
         }
+        
         res.render('display', {
             "topics":name
         });

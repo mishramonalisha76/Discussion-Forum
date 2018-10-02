@@ -8,8 +8,8 @@ var topics=function(req,res){
 		});
 		console.log(req.session.user.name);
 		topicmodel.save(function(err,doc){
-			if(err) res.render('chatbox',{"msg":'Successfully created the topic:'+req.body.topic})
-			res.render('chatbox',{msg:"The topic you entered already exists..!!"})
+			if(!err) res.redirect('display');
+			else res.send(err);
 		});
 };
 

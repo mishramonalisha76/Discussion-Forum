@@ -1,13 +1,11 @@
-$("#input").on("keypress", function(e) {
-  var key = e.keyCode;
-  // If the user has pressed enter
-  if (key == 13) {
-    document.getElementById("input").value = "";
-    return false;
-  } else {
-    return true;
-  }
-});
-
-var textarea = document.getElementById('display');
-textarea.scrollTop = textarea.scrollHeight;
+var dis = document.getElementById('display');
+dis.scrollTop = dis.scrollHeight;
+setInterval(send, 500);
+function send() {
+    $.post('refresh', function(data) {
+        document.getElementById('display').innerHTML = '';
+        for (var i = 0; i < data.length; i++) {
+            document.getElementById('display').innerHTML += '<p class="list-group-item">'+data[i]+'</p>';
+        }
+      });
+}
