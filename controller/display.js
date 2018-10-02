@@ -9,7 +9,7 @@ var display = function(req, res) {
             for (var i = 0; i < docs.length; i++) {
                 name.push((docs[i]).topicname);
             }
-            console.log(docs);
+            console.log(name);
         } else {
             throw err;
         }

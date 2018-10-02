@@ -41,16 +41,13 @@ nav{
   width: 15%;
   background: #D3D3D3;
 }
-.button:hover{
-  background: #A9A9A9;
-  border-width: medium;
-}
 .button:active{
   border-width: thick;
 }
-.button p{
+.button input{
   font-size: 150%;
   padding-left: 30%;
   padding-top: 8%;
   color: #2F4F4F;
+  width: 100%;
 }

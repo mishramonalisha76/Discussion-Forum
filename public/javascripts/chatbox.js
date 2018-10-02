@@ -11,4 +11,3 @@ $("#input").on("keypress", function(e) {
 
 var textarea = document.getElementById('display');
 textarea.scrollTop = textarea.scrollHeight;
-}
