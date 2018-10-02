@@ -14,37 +14,48 @@ router.get('/', function(req, res) {
 
 
 router.get('/login', function(req, res) {
-    if(req.session.user){
+    if (req.session.user) {
         res.redirect('/profile');
-    }
-    else {
-        res.render('login',{"msg":""});
+    } else {
+        res.render('login', {
+            "msg": ""
+        });
     }
 });
 router.get('/register', function(req, res) {
-    if(req.session.user){
-        res.render('register');
-    }
-    else {
+    if (req.session.user) {
         res.redirect('profile');
+    } else {
+        res.render('register');
     }
 });
 router.get('/homepage', function(req, res) {
-    if(req.session.user){
+    if (req.session.user) {
         res.redirect('profile');
-    }
-    else {
+    } else {
         res.render('page');
     }
 });
-router.get('/topic/:id', function(req, res){
+router.get('/topic/:id', function(req, res) {
     req.session.topic = req.params.id;
-    res.render('chatbox')
+
+    if (req.session.user) {
+        res.render('chatbox');
+    } else {
+        res.redirect('homepage');
+    }
 });
 
 router.get('/profile', function(req, res) {
-    console.log(req.session.user);
-    res.render('profile',{'user':req.session.user});
+    if (req.session.user) {
+        res.render('profile', {
+            'user': req.session.user
+        });
+    }
+    else {
+        res.redirect('/homepage')
+    }
+
 });
 
 
@@ -57,6 +68,8 @@ router.post('/refresh', refresh.messages);
 router.get('/logout', function(req, res) {
     req.session.user = null;
     console.log(req.session);
-    res.render('login',{"msg":"Logged out Successfully..!!"});
+    res.render('login', {
+        "msg": "Logged out Successfully..!!"
+    });
 });
 module.exports = router;
