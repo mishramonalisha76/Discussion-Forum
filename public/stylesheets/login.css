@@ -1,4 +1,4 @@
-div.loginpage{
+.loginpage{
     border: 2px solid black;
     width:30%;
     position:absolute;
@@ -8,10 +8,13 @@ div.loginpage{
     right:0;
     margin:auto;
     padding:5px;
-     font-variant:small-caps;
+    
     background-color:rgba(255, 239, 244, 0.5);
   
 
+  }
+  label{
+    font-variant: small-caps;
   }
   body{
     background-image:url("/images/chatting.png") ;
