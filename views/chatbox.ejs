@@ -16,35 +16,32 @@
 
 <body>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
 
-    </script>
-
-    <div class="container">
-        <div class="row container">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header navbarman">
-                        <a class="navbar-brand logo">Room</a>
-                        <a class="navbar-brand logo" href="display">Browse Topics</a>
-                        <a class="navbar-brand logo" href="profile">Profile</a>
-                        <a class="navbar-brand logo" href="logout">Logout</a>
+            <div class="row">
+                <nav class="navbar navbar-inverse navbar-fixed-top container">
+                    <div class="container">
+                        <div class="navbar-header navbarman container">
+                            <a class="navbar-brand logo" style="color:white;">Welcome
+                                <%- user.name %> | </a>
+                            <a class="navbar-brand logo" href="display">Browse Topics</a>
+                            <a class="navbar-brand logo" href="profile">Profile</a>
+                            <a class="navbar-brand logo" href="logout">Logout</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
-
-        <div class="chatbox container">
-            <div id="display" class="display">
-
+                </nav>
             </div>
-            <form action="send" method="post">
-                <div class="row misc">
-                    <input  onmouseover="scrolldown()" id="input" class="input" name="message" autofocus>
-                    <input class="button" type="submit" value="Send">
-                </div>
-            </form>
+
+    <div class="chatbox container">
+        <div id="display" class="display">
+
         </div>
+        <form action="send" method="post">
+            <div class="row misc">
+                <input onmouseover="scrolldown()" id="input" class="input" name="message" autofocus autocomplete="off" required>
+                <input class="button" type="submit" value="Send">
+            </div>
+        </form>
+    </div>
     </div>
 
     <script type="text/javascript" src="javascripts/chatbox.js"></script>

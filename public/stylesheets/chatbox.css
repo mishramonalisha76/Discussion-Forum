@@ -22,7 +22,9 @@ nav{
   height: 90%;
   overflow: auto;
 }
-
+.display p{
+    word-break: break-all;
+}
 .input{
   font-size: 170%;
   border-style: solid;

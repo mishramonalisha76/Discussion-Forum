@@ -24,6 +24,10 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(session({path:"/",secret:"nosecretcoden",resave:false,saveUninitialize:false}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
